@@ -1,4 +1,4 @@
-# Nature's Spring Foundation Admin Panel and API
+## Nature's Spring Foundation Admin Panel and API
 Adminal Panel and API for Nature's Spring Foundation website.
 
 ## Usage
