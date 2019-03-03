@@ -1,0 +1,31 @@
+.headline {
+    height: 300px;
+    background-color: #fff;
+}
+
+.headline h1,
+.headline p {
+    text-transform: uppercase;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.headline h1 {
+    color: #ccc;
+    font-size: 100px;
+}
+
+.headline p {
+    font-size: 40px;
+    left: 10%;
+}
+
+@media (max-width: 768px) {
+    .headline {
+        height: 150px;
+    }
+
+    .headline p {
+        font-size: 30px;
+    }
+}

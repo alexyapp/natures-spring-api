@@ -14,7 +14,15 @@
 @import '~@fortawesome/fontawesome-free/scss/solid';
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
 
-.navbar-laravel {
+// Import Navbar
+@import './website/navbar';
+
+// Import Headline
+@import './website/headline';
+
+// Import Careers
+@import './website/careers';
+
+body {
   background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }

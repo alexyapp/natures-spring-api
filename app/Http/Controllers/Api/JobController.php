@@ -17,25 +17,40 @@ class JobController extends Controller
      * Display a listing of the resource.
      *
      * @param \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
+     * @return \App\Http\Resources\Job
      */
     public function index(Request $request)
     {
-        if ($request->has('city'))
-            $city = City::where('slug', $request->city)->first();
-            return JobResource::collection($city->jobs);
+        if ($request->has('location') && $request->has('query')) {
+            $islandGroup = IslandGroup::where('slug', $request->input('location'))->first();
 
-        if ($request->has('province'))
-            $province = Province::where('slug', $request->province)->first();
-            return JobResource::collection($province->jobs);
+            $jobs = Job::whereHas('province', function ($query) use ($request) {
+                            $query->where('name', 'like', "%{$request->input('query')}%")
+                                ->whereHas('islandGroup', function ($query) use ($request) {
+                                    $query->where('slug', $request->input('location'));
+                                });
+                        })
+                        ->orWhereHas('city', function ($query) use ($request) {
+                            $query->where('name', 'like', "%{$request->input('query')}%")
+                                ->whereHas('province.islandGroup', function ($query) use ($request) {
+                                    $query->where('slug', $request->input('location'));
+                                });
+                        });
 
-        if ($request->has('island_group'))
-            $island_group = IslandGroup::where('slug', $request->island_group)->first();
-            return JobResource::collection($island_group->jobs);
+            return JobResource::collection($jobs->paginate(10));
+        }
+
+        if ($request->has('location')) {
+            $islandGroup = IslandGroup::where('slug', $request->location)->first();
+            return JobResource::collection($islandGroup->jobs()->latest()->paginate(10));
+        }
 
         if (filter_var($request->all, FILTER_VALIDATE_BOOLEAN))
             $jobs = Job::all();
             return JobResource::collection($jobs);
+
+        $jobs = Job::paginate(10);
+        return JobResource::collection($jobs);
     }
 
     /**

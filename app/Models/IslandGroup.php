@@ -26,7 +26,17 @@ class IslandGroup extends Model
     public $timestamps = false;
 
     /**
-     * Get all provinces beloging to this island group
+     * Get all jobs that belong to this island group.
+     * 
+     * @return \App\Models\Job;
+     */
+    public function jobs()
+    {
+        return $this->hasMany(Job::class);
+    }
+
+    /**
+     * Get all provinces that belong to this island group.
      * 
      * @return \App\Models\Province
      */
@@ -36,7 +46,7 @@ class IslandGroup extends Model
     }
 
     /**
-     * Get all cities beloging to a province belonging to this island group
+     * Get all cities that belong to a province that belong to this island group
      * 
      * @return \App\Models\City
      */

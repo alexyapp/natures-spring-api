@@ -16352,8 +16352,80 @@ readers do not read off random characters that represent icons */
   width: auto;
 }
 
-.navbar-laravel {
+.navbar {
+  background-color: #00AEEF;
+}
+
+.navbar-custom .nav-link {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.headline {
+  height: 300px;
   background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.headline h1,
+.headline p {
+  text-transform: uppercase;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.headline h1 {
+  color: #ccc;
+  font-size: 100px;
+}
+
+.headline p {
+  font-size: 40px;
+  left: 10%;
+}
+
+@media (max-width: 768px) {
+  .headline {
+    height: 150px;
+  }
+
+  .headline p {
+    font-size: 30px;
+  }
+}
+
+.come-work-with-us-section h1,
+.come-work-with-us-section p {
+  color: #fff;
+}
+
+.come-work-with-us-section h1 {
+  font-size: 80px;
+}
+
+.come-work-with-us-section p {
+  font-size: 60px;
+}
+
+.why-join-us-section p {
+  font-size: 20px;
+}
+
+.why-join-us-section h3 {
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .come-work-with-us-section h1 {
+    font-size: 60px;
+  }
+
+  .come-work-with-us-section p {
+    font-size: 40px;
+  }
+}
+
+body {
+  background-color: #fff;
 }
 

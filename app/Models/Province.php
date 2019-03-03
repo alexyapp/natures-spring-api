@@ -44,7 +44,7 @@ class Province extends Model
      * 
      * @return \App\Models\IslandGroup
      */
-    public function island_group()
+    public function islandGroup()
     {
         return $this->belongsTo(IslandGroup::class);
     }

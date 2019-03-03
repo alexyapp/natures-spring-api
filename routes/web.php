@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('jobs', 'PageController@jobs');
+Route::get('careers', 'PageController@careers')->name('website.careers');
 
 Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'auth'], function () {
     $this->get('/', 'HomeController')->name('admin.home');

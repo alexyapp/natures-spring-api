@@ -4,6 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 use App\Http\Resources\City as CityResource;
+use App\Http\Resources\IslandGroup as IslandGroupResource;
 
 class Province extends JsonResource
 {
@@ -19,7 +20,7 @@ class Province extends JsonResource
             'id' => $this->id,
             'name' => $this->name,
             'slug' => $this->slug,
-            'island_group' => $this->island_group->name,
+            'island_group' => new IslandGroupResource($this->island_group),
             'cities' => CityResource::collection($this->cities)
         ];
     }

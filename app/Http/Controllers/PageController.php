@@ -8,9 +8,9 @@ use App\Models\Job;
 class PageController extends Controller
 {
     /**
-     * Serve the jobs page along with the required data.
+     * Return Careers page
      */
-    public function jobs(Request $request)
+    public function careers(Request $request)
     {
         if ($search = $request->search)
             $jobs = Job::whereHas('island_group', function ($q) {
@@ -21,6 +21,6 @@ class PageController extends Controller
                         ->get();
 
         $jobs = Job::paginate(10);
-        return view('website.jobs.index', compact('jobs'));
+        return view('website.careers.index', compact('jobs'));
     }
 }
