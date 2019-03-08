@@ -35,6 +35,7 @@ Route::group(['prefix' => 'v1', 'namespace' => 'Api'], function () {
 
     // Events
     $this->get('events', 'EventController@index');
+    $this->get('/{event}', 'EventController@show');
 
     // Locations
     $this->group(['prefix' => 'locations'], function () {
@@ -46,6 +47,20 @@ Route::group(['prefix' => 'v1', 'namespace' => 'Api'], function () {
 
     // Protected Routes
     $this->group(['middleware' => ['auth:api']], function () {
+        // Users
+        $this->group(['prefix' => 'users', 'middleware' => 'role:admin'], function () {
+            $this->post('/', 'UserController@store');
+            $this->patch('/{user}', 'UserController@update');
+            $this->delete('/{user}', 'UserController@destroy');
+        });
+
+        // Roles
+        $this->group(['prefix' => 'roles', 'middleware' => 'role:admin'], function () {
+            $this->post('/', 'RoleController@store');
+            $this->patch('/{role}', 'RoleController@update');
+            $this->delete('/{role}', 'RoleController@destroy');
+        });
+
         // Jobs
         $this->group(['prefix' => 'jobs', 'middleware' => 'role:admin,hr'], function () {
             $this->post('/', 'JobController@store');
@@ -55,7 +70,6 @@ Route::group(['prefix' => 'v1', 'namespace' => 'Api'], function () {
 
         // Events
         $this->group(['prefix' => 'events', 'middleware' => 'role:admin,marketing'], function () {
-            $this->get('/{event}', 'EventController@show');
             $this->post('/', 'EventController@store');
             $this->patch('/{event}', 'EventController@update');
             $this->delete('/{event}', 'EventController@destroy');

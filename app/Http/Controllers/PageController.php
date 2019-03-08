@@ -4,23 +4,49 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Job;
+use App\Models\Event;
 
 class PageController extends Controller
 {
     /**
-     * Return Careers page
+     * Show home.
      */
-    public function careers(Request $request)
+    public function home()
     {
-        if ($search = $request->search)
-            $jobs = Job::whereHas('island_group', function ($q) {
-                            $q->where('')
-                                ->orWhere('description', 'like', '%' . $search . '%')
-                                ->where('title', 'like', '%' . $search . '%');
-                        })
-                        ->get();
+        return view('website.home');
+    }
 
-        $jobs = Job::paginate(10);
-        return view('website.careers.index', compact('jobs'));
+    /**
+     * Show all careers.
+     */
+    public function careers()
+    {
+        return view('website.careers.index');
+    }
+
+    /**
+     * Show a single career.
+     */
+    public function career(Job $career)
+    {
+        return view('website.careers.carer', compact('career'));
+    }
+
+    /**
+     * Show all events.
+     */
+    public function events()
+    {
+        return view('website.events.index');
+    }
+
+    /**
+     * Show a single event.
+     * 
+     * @param \App\Models\Event $event
+     */
+    public function event(Event $event)
+    {
+        return view('website.events.event', compact('event'));
     }
 }

@@ -159,7 +159,7 @@
                         submitButton.attr('disabled', false).text('Submit');
                         
                         if (res.data) {
-                            window.location = '/admin/jobs';
+                            window.location = '/admin/jobs?success=true&action=create';
                         }
                     },
                     error: function(err) {

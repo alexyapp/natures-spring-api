@@ -1,11 +1,11 @@
 <!-- Sidebar -->
 <ul class="sidebar navbar-nav">
-    <li class="nav-item {{ request()->is('admin/dashboard*') ? 'active' : '' }}">
+    {{-- <li class="nav-item {{ request()->is('admin/dashboard*') ? 'active' : '' }}">
         <a class="nav-link" href="{{ route('admin.home') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span>
         </a>
-    </li>
+    </li> --}}
     {{-- <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-fw fa-folder"></i>
@@ -32,6 +32,18 @@
         <a class="nav-link" href="tables.html">
             <i class="fas fa-fw fa-table"></i>
             <span>Tables</span>
+        </a>
+    </li> --}}
+    <li class="nav-item {{ request()->is('admin/users*') ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('users.index') }}">
+            <i class="fas fa-fw fa-user"></i>
+            <span>Users</span>
+        </a>
+    </li>
+    {{-- <li class="nav-item {{ request()->is('admin/users*') ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('users.index') }}">
+            <i class="fas fa-fw fa-user-lock"></i>
+            <span>Roles</span>
         </a>
     </li> --}}
     <li class="nav-item {{ request()->is('admin/jobs*') ? 'active' : '' }}">

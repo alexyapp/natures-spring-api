@@ -13,11 +13,24 @@ class EventController extends Controller
     /**
      * Display a listing of the resource.
      *
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $events = Event::paginate(10);
+        if ($request->has('from') && $request->has('to')) {
+            $from = strtotime($request->input('from'));
+            $to = strtotime($request->input('to'));
+            $from = date('Y-m-d', $from);
+            $to = date('Y-m-d', $to);
+
+            $events = Event::whereBetween('start_date', [$from, $to]);
+
+            filter_var($request->input('all'), FILTER_VALIDATE_BOOLEAN) ? $events = $events->get()
+                                                                        : $events = $events->paginate(10);
+        } else {
+            $events = Event::paginate(10);
+        }
 
         return EventResource::collection($events);
     }

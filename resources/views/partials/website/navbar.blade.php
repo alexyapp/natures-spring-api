@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-md navbar-custom py-3">
+<nav class="navbar navbar-expand-md navbar-light navbar-custom py-3">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
-            {{ config('app.name', 'Laravel') }}
+            <img style="height: 50px; width: auto;" src="{{ asset('images/logo-thumb.png') }}" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>
@@ -45,22 +45,27 @@
                     </li>
                 @endguest --}}
                 <li class="nav-item mx-md-3">
-                    <a class="nav-link" href="">
+                    <a class="nav-link" href="{{ route('website.home') }}">
                         Home
                     </a>
                 </li>
                 <li class="nav-item mx-md-3">
-                    <a class="nav-link" href="">
+                    <a class="nav-link" href="{{ route('website.about') }}">
                         About Us
                     </a>
                 </li>
                 <li class="nav-item mx-md-3">
-                    <a class="nav-link" href="{{ route('website.careers') }}">
+                    <a class="nav-link" href="{{ route('website.events') }}">
+                        Events
+                    </a>
+                </li>
+                <li class="nav-item mx-md-3">
+                    <a class="nav-link" href="{{ route('website.products') }}">
                         Products
                     </a>
                 </li>
                 <li class="nav-item mx-md-3">
-                    <a class="nav-link" href="">
+                    <a class="nav-link" href="{{ route('website.careers') }}">
                         Careers
                     </a>
                 </li>

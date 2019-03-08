@@ -56,6 +56,11 @@
         .career-info {
             border-bottom: 1px solid #dee2e6;
         }
+
+        .come-work-with-us-section {
+            background: url('../images/careers1.png') no-repeat;
+            background-size: cover;
+        }
     </style>
 @endpush   
 
@@ -64,27 +69,27 @@
     @include('partials.website.headline', ['headlineLabel' => 'Careers'])
 
     <div class="container-fluid p-4 p-md-5 come-work-with-us-section" style="background-color: #333">
-        <div class="container">
+        <div class="container py-lg-5">
             <div class="row">
                 <div class="col-12 text-center">
-                    <h1>Come Work With Us</h1>
-                    <p class="mb-0">view openings in:</p>
+                    <h1>COME WORK WITH US</h1>
+                    <p class="mb-4">view openings in:</p>
                 </div>
             </div>
             <div class="row text-center">
                 <div class="col-12 col-md-4 mb-3 mb-md-0">
                     <a class="btn btn-primary btn-custom" href="" data-location="luzon">
-                        Luzon
+                        LUZON
                     </a>
                 </div>
                 <div class="col-12 col-md-4 mb-3 mb-md-0">
                     <a class="btn btn-primary btn-custom" href="" data-location="visayas">
-                        Visayas
+                        VISAYAS
                     </a>
                 </div>
                 <div class="col-12 col-md-4 mb-3 mb-md-0">
                     <a class="btn btn-primary btn-custom" href="" data-location="mindanao">
-                        Mindanao
+                        MINDANAO
                     </a>
                 </div>
             </div>
@@ -94,7 +99,7 @@
     <div class="container py-4 py-md-5 why-join-us-section">
         <div class="row">
             <div class="col-12 text-center">
-                <h3 class="mb-md-4">Why Join Us?</h3>
+                <h3 class="mb-4">Why Join Us?</h3>
                 <p>Now a leading purified bottled drinking water and enjoying an increasing market share, PHILIPPINE SPRING WATER RESOURCES, INC (PSWRI) has since addressed the increased product volume requirements by building three other production facilities. Two for Luzon area- one in Guiguinto, Bulacan and other in Calamba, Laguna. And also in Cagayan de Oro City and Davao City for the Mindanao market.</p>
             </div>
         </div>
@@ -102,25 +107,34 @@
 
     <div class="container benefits-section">
         <div class="row text-center">
-            <div class="col-md-3">
-                <img src="" alt="">
-                <p>Medical</p>
+            <div class="col-md-6 col-lg-3 mb-4 mb-md-5">
+                <div class="mb-3" style="height: 150px;">
+                    <img class="h-100" src="{{ asset('images/medical-icon.png') }}" alt="Medical Icon">
+                </div>
+                <p>MEDICAL</p>
             </div>
-            <div class="col-md-3">
-                <img src="" alt="">
-                <p>Loans</p>
+            <div class="col-md-6 col-lg-3 mb-4 mb-md-5">
+                <div class="mb-3" style="height: 150px;">
+                    <img class="h-100" src="{{ asset('images/loans-icon.png') }}" alt="Loans Icon">
+                </div>
+                <p>LOANS</p>
             </div>
-            <div class="col-md-3">
-                <img src="" alt="">
-                <p>Allowance</p>
+            <div class="col-md-6 col-lg-3 mb-4 mb-md-5">
+                <div class="mb-3" style="height: 150px;">
+                    <img style="padding: calc(23px + .5rem) 0;" src="{{ asset('images/allowance-icon.png') }}" alt="Allowance Icon">
+                </div>
+                <p>ALLOWANCE</p>
             </div>
-            <div class="col-md-3">
-                <img src="" alt="">
-                <p>Miscellaneous</p>
+            <div class="col-md-6 col-lg-3 mb-4 mb-md-5">
+                <div class="mb-3" style="height: 150px;">
+                    <img class="h-100" src="{{ asset('images/misc-icon.png') }}" alt="Misc Icon">
+                </div>
+                <p>MISCELLANEOUS</p>
             </div>
         </div>
     </div>
 
+    <!-- Careers Modal -->
     <div class="modal fade" id="careersModal" tabindex="-1" role="dialog" aria-labelledby="careersModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content h-100">
@@ -137,23 +151,7 @@
                 <div class="modal-body position-relative p-0">
                     <img class="loader position-absolute" src="{{ asset('images/spinner.gif') }}" alt="">
                     <div class="container-fluid career-wrapper">
-                        {{-- <div class="row career-info text-center">
-                            <div class="col-md-4 career-title-wrapper">
-                                <h3>JOB TITLE</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at luctus quam.</p>
-                                <a class="btn btn-primary apply-button" href="">
-                                    APPLY
-                                </a>
-                            </div>
-                            <div class="col-md-4 career-description-wrapper">
-                                <h3>JOB RESPONSIBILITIES</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at luctus leo. Maecenas efficitur, elit eget tempus vehicula, risus quam mollis turpis, vel egestas massa nibh vehicula nunc. Phasellus ac augue vehicula, rutrum risus ut, aliquam quam. </p>
-                            </div>
-                            <div class="col-md-4 career-location-wrapper">
-                                <h3>JOB LOCATION</h3>
-                                <p>Cebu City, Cebu</p>
-                            </div>
-                        </div> --}}
+
                     </div>
                 </div>
                 <div class="modal-footer py-5"></div>
@@ -229,7 +227,7 @@
                             res.data.forEach(function(career, index) {
                             html += `
                                 <div class="row career-info text-center py-5">
-                                    <div class="col-md-4 career-title-wrapper mb-4 mb-md-0">
+                                    <div class="col-lg-4 career-title-wrapper mb-4 mb-lg-0">
                                         <h3>
                                             <a href="/careers/${career.slug}" target="_blank">JOB TITLE</a>
                                         </h3>
@@ -238,13 +236,13 @@
                                             APPLY
                                         </a>
                                     </div>
-                                    <div class="col-md-4 career-description-wrapper mb-4 mb-md-0">
+                                    <div class="col-lg-4 career-description-wrapper mb-4 mb-lg-0">
                                         <h3>
                                             <a href="/careers/${career.slug}" target="_blank">JOB DESCRIPTION</a>
                                         </h3>
                                         <p>${career.short_description}</p>
                                     </div>
-                                    <div class="col-md-4 career-location-wrapper">
+                                    <div class="col-lg-4 career-location-wrapper">
                                         <h3>
                                             <a href="/careers/${career.slug}" target="_blank">JOB LOCATION</a>
                                         </h3>
@@ -329,6 +327,7 @@
                 clearModal();
                 resetCurrentPage();
                 $('#search-job-form label').text('Search Jobs');
+                $('#search-job-form input').val('');
             });
 
             // Fetch data when modal is shown
