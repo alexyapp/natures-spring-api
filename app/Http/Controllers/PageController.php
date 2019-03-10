@@ -29,7 +29,7 @@ class PageController extends Controller
      */
     public function career(Job $career)
     {
-        return view('website.careers.carer', compact('career'));
+        return view('website.careers.career', compact('career'));
     }
 
     /**
