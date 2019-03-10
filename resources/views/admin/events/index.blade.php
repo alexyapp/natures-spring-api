@@ -45,7 +45,10 @@
             </table>
           </div>
         </div>
-        <div class="card-footer small text-muted">Updated {{ $lastUpdated }}</div>
+        
+        @if (!empty($latestUpdatedEvent))
+            <div class="card-footer small text-muted">Updated {{ $latestUpdatedEvent->updated_at->format('F d, Y g:i A') }}</div>
+        @endif
 
         <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="confirmModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">

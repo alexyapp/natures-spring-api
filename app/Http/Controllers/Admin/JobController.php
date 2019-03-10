@@ -40,8 +40,9 @@ class JobController extends Controller
      */
     public function index()
     {
-        $lastUpdated = Job::latest('updated_at')->firstOrFail()->updated_at->format('F d, Y g:i A');
-        return view('admin.jobs.index', compact('lastUpdated'));
+        $latestUpdatedJob = Job::latest('updated_at')->first();
+        
+        return view('admin.jobs.index', compact('latestUpdatedJob'));
     }
 
     /**

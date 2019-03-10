@@ -46,8 +46,9 @@ class EventController extends Controller
      */
     public function index()
     {
-        $lastUpdated = Event::latest('updated_at')->firstOrFail()->updated_at->format('F d, Y g:i A');
-        return view('admin.events.index', compact('lastUpdated'));
+        $latestUpdatedEvent = Event::latest('updated_at')->first();
+
+        return view('admin.events.index', compact('latestUpdatedEvent'));
     }
 
     /**
