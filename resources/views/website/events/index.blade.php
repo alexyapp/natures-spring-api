@@ -129,44 +129,89 @@
                 </div>
                 <div class="modal-body position-relative p-0">
                     <img class="loader position-absolute" src="{{ asset('images/spinner.gif') }}" alt="">
-                    <div class="container-fluid events-wrapper">
-                        <div class="row">
-                            <div class="col-12 col-lg-4 events-jan-wrapper">
-                                <h3 class="text-center">Jan</h3>
-                                <div style="height: 300px; overflow-y: scroll;" class="container-fluid">
-                                    <div class="row"></div>
+                    <div class="container-fluid events-wrapper d-none">
+                        <div class="jan-jun-wrapper d-none">
+                            <div class="row">
+                                <div class="col-12 col-lg-4 events-jan-wrapper">
+                                    <h3 class="text-center">Jan</h3>
+                                    <div style="height: 300px; overflow-y: scroll;" class="container-fluid">
+                                        <div class="row"></div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4 events-feb-wrapper">
+                                    <h3 class="text-center">Feb</h3>
+                                    <div style="height: 300px; overflow-y: scroll;" class="container-fluid">
+                                        <div class="row"></div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4 events-mar-wrapper">
+                                    <h3 class="text-center">Mar</h3>
+                                    <div style="height: 300px; overflow-y: scroll;" class="container-fluid">
+                                        <div class="row"></div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-12 col-lg-4 events-feb-wrapper">
-                                <h3 class="text-center">Feb</h3>
-                                <div style="height: 300px; overflow-y: scroll;" class="container-fluid">
-                                    <div class="row"></div>
+                            <div class="row">
+                                <div class="col-12 col-lg-4 events-apr-wrapper">
+                                    <h3 class="text-center">Apr</h3>
+                                    <div style="height: 300px; overflow-y: scroll;" class="container-fluid">
+                                        <div class="row"></div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-12 col-lg-4 events-mar-wrapper">
-                                <h3 class="text-center">Mar</h3>
-                                <div style="height: 300px; overflow-y: scroll;" class="container-fluid">
-                                    <div class="row"></div>
+                                <div class="col-12 col-lg-4 events-may-wrapper">
+                                    <h3 class="text-center">May</h3>
+                                    <div style="height: 300px; overflow-y: scroll;" class="container-fluid">
+                                        <div class="row"></div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4 events-jun-wrapper">
+                                    <h3 class="text-center">Jun</h3>
+                                    <div style="height: 300px; overflow-y: scroll;" class="container-fluid">
+                                        <div class="row"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-12 col-lg-4 events-apr-wrapper">
-                                <h3 class="text-center">Apr</h3>
-                                <div style="height: 300px; overflow-y: scroll;" class="container-fluid">
-                                    <div class="row"></div>
+
+                        <div class="jul-dec-wrapper d-none">
+                            <div class="row">
+                                <div class="col-12 col-lg-4 events-jul-wrapper">
+                                    <h3 class="text-center">Jul</h3>
+                                    <div style="height: 300px; overflow-y: scroll;" class="container-fluid">
+                                        <div class="row"></div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4 events-aug-wrapper">
+                                    <h3 class="text-center">Aug</h3>
+                                    <div style="height: 300px; overflow-y: scroll;" class="container-fluid">
+                                        <div class="row"></div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4 events-sep-wrapper">
+                                    <h3 class="text-center">Sep</h3>
+                                    <div style="height: 300px; overflow-y: scroll;" class="container-fluid">
+                                        <div class="row"></div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-12 col-lg-4 events-may-wrapper">
-                                <h3 class="text-center">May</h3>
-                                <div style="height: 300px; overflow-y: scroll;" class="container-fluid">
-                                    <div class="row"></div>
+                            <div class="row">
+                                <div class="col-12 col-lg-4 events-oct-wrapper">
+                                    <h3 class="text-center">Oct</h3>
+                                    <div style="height: 300px; overflow-y: scroll;" class="container-fluid">
+                                        <div class="row"></div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-12 col-lg-4 events-jun-wrapper">
-                                <h3 class="text-center">Jun</h3>
-                                <div style="height: 300px; overflow-y: scroll;" class="container-fluid">
-                                    <div class="row"></div>
+                                <div class="col-12 col-lg-4 events-nov-wrapper">
+                                    <h3 class="text-center">Nov</h3>
+                                    <div style="height: 300px; overflow-y: scroll;" class="container-fluid">
+                                        <div class="row"></div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4 events-dec-wrapper">
+                                    <h3 class="text-center">Dec</h3>
+                                    <div style="height: 300px; overflow-y: scroll;" class="container-fluid">
+                                        <div class="row"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -205,6 +250,10 @@
                 $('.loader').addClass('d-none').removeClass('d-block');
             }
 
+            $('#eventsModal').on('hidden.bs.modal', function() {
+                $('.events-wrapper, .jan-jun-wrapper, .jul-dec-wrapper').addClass('d-none');
+            });
+
             $('.event-calendar').click(function(e) {
                 e.preventDefault();
 
@@ -242,13 +291,15 @@
                         res.data.forEach(function(value, index) {
                             var date = new Date(value.start_date);
                             var month = months[date.getMonth()];
-                            console.log(month)
                             $(`.events-${month.toLowerCase()}-wrapper .container-fluid .row`).append(`
                                     <div class="col-12 mb-md-2">
                                         <a style="font-size: 20px;" target="_blank" href="/events/${value.slug}">${value.name}</a>
                                     </div>
                                 `)
                         });
+
+                        $(`.${$this.data('dateRange')}-wrapper`).removeClass('d-none');
+                        $('.events-wrapper').removeClass('d-none');
                     }
                 });
             });
