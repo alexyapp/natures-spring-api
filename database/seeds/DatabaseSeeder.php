@@ -48,6 +48,29 @@ class DatabaseSeeder extends Seeder
             $hr->roles()->attach(Role::find(3));
         } else {
             // Create users with real emails
+            $admin = User::create([
+                'name' => 'Test Admin',
+                'email' => 'admin@naturespring.com.ph',
+                'password' => bcrypt('password')
+            ]);
+
+            $admin->roles()->attach(Role::find([1, 2, 3]));
+
+            $marketing = User::create([
+                'name' => 'Test Marketing',
+                'email' => 'marketing@naturespring.com.ph',
+                'password' => bcrypt('password')
+            ]);
+
+            $marketing->roles()->attach(Role::find(2));
+
+            $hr = User::create([
+                'name' => 'Test HR',
+                'email' => 'hr@naturespring.com.ph',
+                'password' => bcrypt('password')
+            ]);
+
+            $hr->roles()->attach(Role::find(3));
         }
     }
 }
