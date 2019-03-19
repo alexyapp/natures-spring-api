@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title')
+    Events
+@endsection
+
 @push('styles')
     <style>
         .far.fa-calendar {

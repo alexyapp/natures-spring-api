@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title')
+    Products
+@endsection
+
 @push('styles')
     <style>
         .classic-section,
@@ -22,7 +26,7 @@
         @media (max-width: 1170px) {
             .classic-section img {
                 left: 50%;
-                bottom: -15px;
+                bottom: -180px;
                 width: 90%;
                 transform: translateX(-50%);
             }
@@ -53,9 +57,8 @@
 
         @media (min-width: 1170px) {
             .classic-section img {
-                max-width: unset;
-                height: 100%;
-                object-position: 0 15px;
+                height: 125%;
+                bottom: -350px;
             }
 
             .classic-section h1 {
@@ -260,7 +263,7 @@
 
     <section>
         <div class="container-fluid position-relative classic-section mb-md-4 overflow-hidden">
-            <img class="img-fluid position-absolute" src="{{ asset('images/bottles.png') }}" alt="">
+            <img class="img-fluid position-absolute" src="{{ asset('images/classic-water.png') }}" alt="">
             <h1 class="position-absolute text-white-50">CLASSIC WATER</h1>
             <div class="modal-custom origin-right v-center position-absolute p-5" data-origin="right">
                 <div class="mb-5">
@@ -327,14 +330,13 @@
             <h1 style="z-index: 9999;" class="position-absolute text-white-50 text-center">FIBER WATER</h1>
             <img class="h-100" src="{{ asset('images/fiber.png') }}" alt="">
             <div class="modal-custom origin-right v-center position-absolute p-5" data-origin="right">
-                <h3>PURIFIED WATER</h3>
-                <p>For daily consumption of clean, pure, and affordable bottled drinking water.</p>
-
-                <h3>DISTILLED</h3>
-                <p>Pediatricians recommendation for babies and/or infants</p>
-
-                <h3>PH9</h3>
-                <p>Neutralize acidity that builds up in the body.</p>
+                <div class="modal-body-custom container-fluid">
+                    <div class="row justify-content-md-center">
+                        <div class="col-md-9">
+                            <h3 class="text-center">NATURE’S SPRING FIBER WATER</h3>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -346,7 +348,7 @@
                 <div class="modal-body-custom container-fluid">
                     <div class="row justify-content-md-center">
                         <div class="col-md-9">
-                            <h3 class="text-center">NATURE’S SPRING FLAVORED WATER</h3>
+                            <h3 class="text-center">NATURE’S SPRING ICE TEA</h3>
                             <p>It is a green tea-based Ready to Drink (RTD) product that is made from 100% real tea extract.</p>
                         </div>
                     </div>
@@ -374,13 +376,13 @@
 @push('scripts')
     <script>
         $(document).ready(function() {
-            // $('section').hover(function() {
-            //     var $this = $(this),
-            //         modalCustom = $this.find('.modal-custom'),
-            //         origin = modalCustom.data('origin');
+            $('section').hover(function() {
+                var $this = $(this),
+                    modalCustom = $this.find('.modal-custom'),
+                    origin = modalCustom.data('origin');
 
-            //     modalCustom.toggleClass(`show-${origin}`);
-            // });
+                modalCustom.toggleClass(`show-${origin}`);
+            });
         });
     </script>
 @endpush

@@ -5,7 +5,7 @@ require('trumbowyg/dist/plugins/pasteembed/trumbowyg.pasteembed');
 
 // require('./chart-area');
 
-$(document).ready(function () {
+$(document).ready(function() {
   window.Snackbar = require('node-snackbar');
   $.trumbowyg.svgPath = require('trumbowyg/dist/ui/icons.svg');
 });

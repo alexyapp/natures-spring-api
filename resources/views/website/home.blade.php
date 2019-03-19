@@ -1,23 +1,12 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+@section('title')
+    Home
+@endsection
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
-
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+@push('styles')
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
 
     <style>
         @media (max-width: 768px) {
@@ -57,50 +46,42 @@
         #events .row .col-md-3:last-child {
             background: url('../images/When-In-Manila-Philippines-AirAsia-Ati-Atihan-Kalibo-5.jpg');
         }
-    </style>
 
-    @stack('styles')
-</head>
-<body>
-    <div id="app">
-        <section id="hero">
-            <nav id="navbar" class="navbar navbar-expand-lg navbar-light">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-    
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                    <a class="nav-link" href="{{ route('website.about') }}">ABOUT US <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="{{ route('website.events') }}">EVENTS</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="{{ route('website.products') }}">PRODUCTS</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="{{ route('website.careers') }}">CAREERS</a>
-                    </li>
-                </ul>
+        .slick-dots li button:before {
+            font-size: 1.125rem;
+            color: rgba(250, 250, 250, .3);
+        }
+
+        .slick-dots li.slick-active button:before {
+            color: rgba(250, 250, 250, 1);
+        }
+
+        .slick-dots {
+            bottom: 27px;
+        }
+
+        video {
+            width: 100%;
+        }
+    </style>
+@endpush
+
+@section('content')
+        <section>
+            <div class="slider">
+                    <div>
+                        <video autoplay muted loop>
+                            <source src="{{ asset('videos/NS_10s_ONLINE_070318.mp4') }}" type="video/mp4">
+                        </video>
+                    </div>
+                    <div>
+                        <video autoplay muted loop>
+                            <source src="{{ asset('videos/Sparkling_10s.mp4') }}" type="video/mp4">
+                        </video>
+                    </div>
                 </div>
-            </nav>
-            <div id="atf" class="text-center">
-                <div id="heading">
-                <img id="logo" class="d-block mx-auto" src="images/logo.png" alt="Nature's Spring Logo">
-                </div>
-                <div id="subheading">
-                <p>Since 1991, Nature’s Spring brings you  safe and affordable drinking water that is</p>
-                <p>readily available to the community anytime and anywhere.</p>
-                </div>
-            </div>
-            <div class="slider-nav">
-                <div class="active"></div>
-                <div></div>
-                <div></div>
-            </div>
         </section>
+
         <section id="about-us" class="my-5">
             <div class="container-fluid">
                 <h6>02</h6>
@@ -116,15 +97,16 @@
                     </p>
                     </div>
                     <div class="text-center">
-                    <a class="btn btn-primary d-inline-block" href="#">LEARN MORE</a>
+                    <a class="btn btn-primary d-inline-block" href="{{ url('about-us') }}">LEARN MORE</a>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <img class="w-100" src="images/DST.png" alt="Water Bottle">
+                    <img class="mx-auto d-block" style="height: 600px;" src="{{ asset('images/purified-500ml.png') }}" alt="Nature's Spring Purified Water">
                 </div>
                 </div>
             </div>
         </section>
+
         <section id="events">
             <h6>03</h6>
             <div class="container-fluid h-100">
@@ -155,7 +137,7 @@
     
                 </div>
                 <div class="col text-center">
-                    <a class="btn btn-primary d-inline-block" href="#">LEARN MORE</a>
+                    <a class="btn btn-primary d-inline-block" href="{{ url('events') }}">LEARN MORE</a>
                 </div>
                 <div class="col clearfix">
                     <span class="divider float-right"></span>
@@ -163,6 +145,7 @@
                 </div>
             </div>
         </section>
+
         <section id="our-products">
             <div class="container-fluid">
                 <h6>04</h6>
@@ -173,25 +156,26 @@
                 </div>
                 <div class="row text-center mb-5">
                 <div class="col-md-4">
-                    <img class="w-100" src="images/DST.png" alt="Nature's Spring Purified Water">
+                    <img class="mb-3" style="height: 600px;" src="{{ asset('images/purified-500ml.png') }}" alt="Nature's Spring Purified Water">
                     <p>Nature's Spring Purified Water</p>
                 </div>
                 <div class="col-md-4">
-                    <img class="w-100" src="images/DST.png" alt="Nature's Spring Distilled Bottled Water">
+                    <img class="mb-3" style="height: 600px;" src="{{ asset('images/distilled-500ml.png') }}" alt="Nature's Spring Distilled Bottled Water">
                     <p>Nature's Spring Distilled Water</p>
                 </div>
                 <div class="col-md-4">
-                    <img class="w-100" src="images/DST.png" alt="Nature's Spring PH9 Bottled Water">
+                    <img class="mb-3" style="height: 600px;" src="{{ asset('images/PH9-500ml.png') }}" alt="Nature's Spring PH9 Bottled Water">
                     <p>Nature's Spring PH9 Water</p>
                 </div>
                 </div>
                 <div class="row mb-5">
                 <div class="col text-center">
-                    <a class="btn btn-primary d-inline-block" href="#">LEARN MORE</a>
+                    <a class="btn btn-primary d-inline-block" href="{{ url('products') }}">LEARN MORE</a>
                 </div>
                 </div>
             </div>
         </section>
+
         <section id="careers" class="pb-5">
             <div class="container pb-5">
                 <div class="row">
@@ -200,15 +184,16 @@
                 </div>
                 </div>
                 <div class="row text-center">
-                <div class="col">
-                    <h6 class="py-5">COME WORK WITH US</h6>
-                    <div class="pb-5">
-                    <a class="btn btn-primary d-inline-block" href="#">LEARN MORE</a>
+                    <div class="col">
+                        <h6 class="py-5">COME WORK WITH US</h6>
+                        <div class="pb-5">
+                        <a class="btn btn-primary d-inline-block" href="{{ url('careers') }}">LEARN MORE</a>
+                        </div>
                     </div>
-                </div>
                 </div>
             </div>
         </section>
+
         <section id="contact-us" class="my-5">
             <h6>06</h6>
             <div class="container py-5">
@@ -219,7 +204,9 @@
                 <div class="col-md-6">
                     <div class="row mb-3">
                     <div class="col-1">
-                        <img src="images/facebook-logo-button.png" alt="Facebook Logo">
+                        <a href="https://www.facebook.com/naturespring/" target="_blank">
+                            <img src="images/facebook-logo-button.png" alt="Facebook Logo">
+                        </a>
                     </div>
                     <div class="col">
                         <p class="mb-0 ml-2">Lorem ipsum dolor sit amet, consectetur</p>
@@ -227,7 +214,9 @@
                     </div>
                     <div class="row mb-3">
                     <div class="col-1">
-                        <img src="images/instagram-logo.png" alt="Instagram Logo">
+                        <a href="https://www.instagram.com/naturespring_official/">
+                            <img src="images/instagram-logo.png" alt="Instagram Logo">
+                        </a>
                     </div>
                     <div class="col">
                         <p class="mb-0 ml-2">adipiscing elit. Nullam at luctus leo. Maecenas </p>
@@ -235,7 +224,9 @@
                     </div>
                     <div class="row">
                     <div class="col-1">
-                        <img src="images/twitter-logo-button.png" alt="Twitter Logo">
+                        <a href="https://twitter.com/natures_spring">
+                            <img src="images/twitter-logo-button.png" alt="Twitter Logo">
+                        </a>
                     </div>
                     <div class="col">
                         <p class="mb-0 ml-2">efficitur, elit eget tempus vehicula, risus quam.</p>
@@ -261,9 +252,17 @@
                 </div>
             </div>
         </section>
-    </div>
+@endsection
 
-    <script src="{{ asset('js/app.js') }}"></script>
-    @stack('scripts')
-</body>
-</html>
+    
+    @push('scripts')
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('.slider').slick({
+                    arrows: false,
+                    dots: true
+                });
+            });
+        </script>
+    @endpush

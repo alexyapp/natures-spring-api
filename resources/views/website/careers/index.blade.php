@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title')
+    Careers
+@endsection
+
 @push('styles')
     <style>
         /* .modal.fade .modal-dialog {

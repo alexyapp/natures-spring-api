@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title')
+    Events - {{ $event->name }}
+@endsection
+
 @push('styles')
     <style>
         .video-wrapper {

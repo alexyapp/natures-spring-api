@@ -16476,7 +16476,8 @@ p {
 
 /* hero */
 
-#hero {
+#hero,
+.hero {
   height: 100vh;
   background: url(/images/hero.jpg?3d182f8abb005829b1c1336d2f9390e1) no-repeat;
   background-size: cover;

@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title')
+    About Us
+@endsection
+
 @push('styles')
     <style>
         .mission-vision-section h1,
