@@ -266,19 +266,23 @@
             <img class="img-fluid position-absolute" src="{{ asset('images/classic-water.png') }}" alt="">
             <h1 class="position-absolute text-white-50">CLASSIC WATER</h1>
             <div class="modal-custom origin-right v-center position-absolute p-5" data-origin="right">
-                <div class="mb-5">
+                <div class="mb-3">
                     <h3>PURIFIED WATER</h3>
-                    <p>For daily consumption of clean, pure, and affordable bottled drinking water.</p>
+                    <p class="mb-2">NATURE'S SPRING PURIFIED Drinking Water is a quality yet affordable brand for daily consumption of clean, and safe bottled water.</p>
+                    <p>NATURE'S SPRING PURIFIED Drinking Water is available in 350 mL, 500mL, 1L, 1.5L, 4L, 6.6L, and 10L.</p>
                 </div>
 
-                <div class="mb-5">
+                <div class="mb-3">
                     <h3>DISTILLED</h3>
-                    <p>Pediatricians recommendation for babies and/or infants</p>
+                    <p class="mb-2">NATURE'S SPRING PURIFIED Distilled Drinking Water is the mothers' goto water brand and recommended by Pediatricians due to its quality, purity, safety and affordability</p>
+                    <p class="mb-2">NATURE'S SPRING PURIFIED Distilled Drinking Water undergoes 12-stage process with different levels of filtration, purification and distillation process to remove impurities using state-of-the-art facilities.</p>
+                    <p>It is available in 350mL, 500mL, 1L, 1.5L, 4L, 6.6L and 10L.</p>
                 </div>
 
                 <div>
                     <h3>PH9</h3>
-                    <p>Neutralize acidity that builds up in the body.</p>
+                    <p>NATURE'S SPRING pH9 Drinking Water comes with the highest pH level (Alkaline) that helps neutralize acid build-up in the body.</p>
+                    <p>NATURE'S SPRING pH9 Drinking Water is available in 350mL, 500mL, 1L, 1.5L, 4L, 6.6L and 10L.</p>
                 </div>
             </div>
         </div>
@@ -307,17 +311,12 @@
                     <div class="row justify-content-md-center">
                         <div class="col-md-9">
                             <h3 class="text-center">NATURE’S SPRING FLAVORED WATER</h3>
-                            <ul>
-                                <li>
-                                    A water-based drink with fruity twist flavors.
-                                </li>
-                                <li>
-                                    Packed with B Vitamins such as B1, B3, B6, and B12.
-                                </li>
-                                <li>
-                                    Healthier alternative than soft drinks.
-                                </li>
-                            </ul>
+                            <p class="mb-2">
+                                NATURE'S SPRING Flavored Water Drink is a water-based drink with 100% fruit concentrate, no sugar added, and no added preservatives. It is also packed with B Vitamins such as B1, B3, B6 and B12.
+                            </p>
+                            <p>
+                                NATURE'S SPRING Flavored Water Drink fulfills your thirst for a #FlavorPaMore taste with #FruityKipg twist of Apple, Grapes, Calamansi, and Honeydew. Available in 350mL, and 500mL.
+                            </li>
                         </div>
                     </div>
                 </div>
@@ -334,6 +333,9 @@
                     <div class="row justify-content-md-center">
                         <div class="col-md-9">
                             <h3 class="text-center">NATURE’S SPRING FIBER WATER</h3>
+                            <p class="mb-2">Tastes like water but with added benefits. NATURE'S SPRING Fiber Water is infused with soluble dietary fiber that helps with your digestion.</p>
+                            <p class="mb-2">NATURE'S SPRING Fiber Water made healthy lifestyle hassle free and even more convenient - Water + Fiber in a bottle. It contains prebiotics that feeds probiotics and keeps your gut in perfect shape.</p>
+                            <p>NATURE'S SPRING Fiber Water is available in 500mL.</p>
                         </div>
                     </div>
                 </div>
@@ -349,7 +351,9 @@
                     <div class="row justify-content-md-center">
                         <div class="col-md-9">
                             <h3 class="text-center">NATURE’S SPRING ICE TEA</h3>
-                            <p>It is a green tea-based Ready to Drink (RTD) product that is made from 100% real tea extract.</p>
+                            <p class="mb-2">NATURE'S SPRING Ice Tea is a ready-to-drink (RTD) product made from 100% real green tea extract that contains antioxidants. It has no sugar added, no added preservatives, and free from artificial coloring.</p>
+                            <p class="mb-2">Enjoy a chilled #TealiciouslyGood bottle of NATURE'S SPRING Ice Tea Apple flavor. Available in 220mL, 350mL, and 500mL.</p>
+                            <p>Some settlings and color change naturally occur because of green tea extract oxidation.</p>
                         </div>
                     </div>
                 </div>
@@ -365,6 +369,9 @@
                     <div class="row justify-content-md-center">
                         <div class="col-md-9">
                             <h3 class="text-center">NATURE’S SPRING SPARKLING FLAVORED WATER</h3>
+                            <p class="mb-2">Flavored Sparkling Water by Nature's Spring is a healthier alternative to sugar soda due to its minimal calories content. It comes with 3 different #SparklyTwist flavors, namely: Lime, Apple and Pineapple that has no sugar added, with 100% fruit concentrate, and no added preservatives. Available in 330mL.</p>
+                            <p class="mb-2">For those who seek the good kind of pleasure without a guilt may have a Sparkling Water by Nature's Spring.</p>
+                            <p>Sparkling Water is a variation of water infused with carbon dioxide gas, where carbon dioxide gas has been dissolved under pressure and is a healthier alternative to sugar soda due to its zero calorie content.</p>
                         </div>
                     </div>
                 </div>
