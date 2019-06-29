@@ -7,11 +7,11 @@
 @push('styles')
     <style>
         .far.fa-calendar {
-            font-size: 450px;
+            font-size: 300px;
         }
 
         .calendar-of-activities-section p {
-            font-size: 60px;
+            font-size: 30px;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
