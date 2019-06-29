@@ -11,19 +11,17 @@
 |
 */
 
-Route::view('/', 'website.under-construction');
+// Route::view('/', 'website.under-construction');
 Auth::routes();
 
-Route::group(['middleware' => 'auth'], function () {
-    Route::get('/home', 'PageController@home')->name('website.home');
+Route::get('/', 'PageController@home')->name('website.home');
 
-    Route::view('about-us', 'website.about.index')->name('website.about');
-    Route::view('products', 'website.products.index')->name('website.products');
-    Route::get('careers', 'PageController@careers')->name('website.careers');
-    Route::get('careers/{career}', 'PageController@career')->name('website.career');
-    Route::get('events', 'PageController@events')->name('website.events');
-    Route::get('events/{event}', 'PageController@event')->name('website.event');
-});
+Route::view('about-us', 'website.about.index')->name('website.about');
+Route::view('products', 'website.products.index')->name('website.products');
+Route::get('careers', 'PageController@careers')->name('website.careers');
+Route::get('careers/{career}', 'PageController@career')->name('website.career');
+Route::get('events', 'PageController@events')->name('website.events');
+Route::get('events/{event}', 'PageController@event')->name('website.event');
 
 Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'auth'], function () {
     $this->get('/', 'HomeController')->name('admin.home');
