@@ -112,25 +112,25 @@
     <div class="container benefits-section">
         <div class="row text-center">
             <div class="col-md-6 col-lg-3 mb-4 mb-md-5">
-                <div class="mb-3" style="height: 150px;">
+                <div class="mb-3" style="height: 100px">
                     <img class="h-100" src="{{ asset('images/medical-icon.png') }}" alt="Medical Icon">
                 </div>
                 <p>MEDICAL</p>
             </div>
             <div class="col-md-6 col-lg-3 mb-4 mb-md-5">
-                <div class="mb-3" style="height: 150px;">
+                <div class="mb-3" style="height: 100px">
                     <img class="h-100" src="{{ asset('images/loans-icon.png') }}" alt="Loans Icon">
                 </div>
                 <p>LOANS</p>
             </div>
             <div class="col-md-6 col-lg-3 mb-4 mb-md-5">
-                <div class="mb-3" style="height: 150px;">
-                    <img style="padding: calc(23px + .5rem) 0;" src="{{ asset('images/allowance-icon.png') }}" alt="Allowance Icon">
+                <div class="mb-3" style="height: 100px">
+                    <img class="h-100" src="{{ asset('images/allowance-icon.png') }}" alt="Allowance Icon">
                 </div>
                 <p>ALLOWANCE</p>
             </div>
             <div class="col-md-6 col-lg-3 mb-4 mb-md-5">
-                <div class="mb-3" style="height: 150px;">
+                <div class="mb-3" style="height: 100px">
                     <img class="h-100" src="{{ asset('images/misc-icon.png') }}" alt="Misc Icon">
                 </div>
                 <p>MISCELLANEOUS</p>
