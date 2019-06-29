@@ -70,12 +70,12 @@
         <section>
             <div class="slider">
                     <div>
-                        <video autoplay muted loop>
+                        <video volume="0" id="video1" autoplay muted loop>
                             <source src="{{ asset('videos/NS_10s_ONLINE_070318.mp4') }}" type="video/mp4">
                         </video>
                     </div>
                     <div>
-                        <video autoplay muted loop>
+                        <video volume="0" id="video2" autoplay muted loop>
                             <source src="{{ asset('videos/Sparkling_10s.mp4') }}" type="video/mp4">
                         </video>
                     </div>
@@ -263,6 +263,14 @@
                     arrows: false,
                     dots: true
                 });
+
+                // window.onload = function () {
+                //     var video1 = document.getElementById('video1');
+                //     video1.muted = "muted";
+
+                //     var video2 = document.getElementById('video2');
+                //     video2.muted = "muted";
+                // }
             });
         </script>
     @endpush
