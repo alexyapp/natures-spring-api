@@ -209,27 +209,27 @@
                         </a>
                     </div>
                     <div class="col">
-                        <p class="mb-0 ml-2">Lorem ipsum dolor sit amet, consectetur</p>
+                        <p class="mb-0 ml-2">www.facebook.com/naturespring</p>
                     </div>
                     </div>
                     <div class="row mb-3">
                     <div class="col-1">
-                        <a href="https://www.instagram.com/naturespring_official/">
+                        <a href="https://www.instagram.com/naturespring_official/" target="_blank">
                             <img src="images/instagram-logo.png" alt="Instagram Logo">
                         </a>
                     </div>
                     <div class="col">
-                        <p class="mb-0 ml-2">adipiscing elit. Nullam at luctus leo. Maecenas </p>
+                        <p class="mb-0 ml-2">www.instagram.com/naturespring_official</p>
                     </div>
                     </div>
                     <div class="row">
                     <div class="col-1">
-                        <a href="https://twitter.com/natures_spring">
+                        <a href="https://twitter.com/natures_spring" target="_blank">
                             <img src="images/twitter-logo-button.png" alt="Twitter Logo">
                         </a>
                     </div>
                     <div class="col">
-                        <p class="mb-0 ml-2">efficitur, elit eget tempus vehicula, risus quam.</p>
+                        <p class="mb-0 ml-2">twitter.com/natures_spring</p>
                     </div>
                     </div>
                 </div>
