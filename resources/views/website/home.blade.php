@@ -93,7 +93,7 @@
                     </div>
                     <div class="mb-5">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at luctus leo. Maecenas efficitur, elit eget tempus vehicula, risus quam mollis turpis, vel egestas massa nibh vehicula nunc. Phasellus ac augue vehicula, rutrum risus ut, aliquam quam.
+                        To provide high quality and diversified drinking products using world class equipment and machineries duly supported by competent employees.
                     </p>
                     </div>
                     <div class="text-center">
@@ -202,35 +202,29 @@
                     <h1>CONTACT US</h1>
                 </div>
                 <div class="col-md-6">
-                    <div class="row mb-3">
-                    <div class="col-1">
-                        <a href="https://www.facebook.com/naturespring/" target="_blank">
-                            <img src="images/facebook-logo-button.png" alt="Facebook Logo">
-                        </a>
+                    <div class="row px-2 mb-3">
+                        <div class="d-flex">
+                            <a href="https://www.facebook.com/naturespring/" target="_blank">
+                                <img src="images/facebook-logo-button.png" alt="Facebook Logo">
+                            </a>
+                            <p class="mb-0 ml-2">www.facebook.com/naturespring</p>
+                        </div>
                     </div>
-                    <div class="col">
-                        <p class="mb-0 ml-2">www.facebook.com/naturespring</p>
+                    <div class="row px-2 mb-3">
+                        <div class="d-flex">
+                            <a href="https://www.instagram.com/naturespring_official/" target="_blank">
+                                <img src="images/instagram-logo.png" alt="Instagram Logo">
+                            </a>
+                            <p class="mb-0 ml-2">www.instagram.com/naturespring_official</p>
+                        </div>
                     </div>
-                    </div>
-                    <div class="row mb-3">
-                    <div class="col-1">
-                        <a href="https://www.instagram.com/naturespring_official/" target="_blank">
-                            <img src="images/instagram-logo.png" alt="Instagram Logo">
-                        </a>
-                    </div>
-                    <div class="col">
-                        <p class="mb-0 ml-2">www.instagram.com/naturespring_official</p>
-                    </div>
-                    </div>
-                    <div class="row">
-                    <div class="col-1">
-                        <a href="https://twitter.com/natures_spring" target="_blank">
-                            <img src="images/twitter-logo-button.png" alt="Twitter Logo">
-                        </a>
-                    </div>
-                    <div class="col">
-                        <p class="mb-0 ml-2">twitter.com/natures_spring</p>
-                    </div>
+                    <div class="row px-2">
+                        <div class="d-flex">
+                            <a href="https://twitter.com/natures_spring" target="_blank">
+                                <img src="images/twitter-logo-button.png" alt="Twitter Logo">
+                            </a>
+                            <p class="mb-0 ml-2">twitter.com/natures_spring</p>
+                        </div>
                     </div>
                 </div>
                 </div>
