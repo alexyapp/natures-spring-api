@@ -31,6 +31,17 @@
             }
         }
 
+        @media (max-width: 768px) {
+            .social {
+                /* flex-direction: column !important; */
+                align-items: center !important;
+            }
+
+            .social p {
+                font-size: 14px !important;
+            }
+        }
+
         #events .row .col-md-3:first-child {
             background: url('../images/SinulogFestival-1.jpg');
         }
@@ -202,29 +213,29 @@
         <section id="contact-us" class="my-5">
             <h6>06</h6>
             <div class="container py-5">
-                <div class="row">
+                <div class="row mx-0">
                 <div class="col-md-6 text-center">
                     <h1>CONTACT US</h1>
                 </div>
-                <div class="col-md-6">
-                    <div class="row px-2 mb-3">
-                        <div class="d-flex">
+                <div class="col-md-6 px-0">
+                    <div class="row px-2 mb-3 mx-0">
+                        <div class="d-flex social">
                             <a href="https://www.facebook.com/naturespring/" target="_blank">
                                 <img src="images/facebook-logo-button.png" alt="Facebook Logo">
                             </a>
                             <p class="mb-0 ml-2">www.facebook.com/naturespring</p>
                         </div>
                     </div>
-                    <div class="row px-2 mb-3">
-                        <div class="d-flex">
+                    <div class="row px-2 mb-3 mx-0">
+                        <div class="d-flex social">
                             <a href="https://www.instagram.com/naturespring_official/" target="_blank">
                                 <img src="images/instagram-logo.png" alt="Instagram Logo">
                             </a>
                             <p class="mb-0 ml-2">www.instagram.com/naturespring_official</p>
                         </div>
                     </div>
-                    <div class="row px-2">
-                        <div class="d-flex">
+                    <div class="row px-2 mx-0">
+                        <div class="d-flex social">
                             <a href="https://twitter.com/natures_spring" target="_blank">
                                 <img src="images/twitter-logo-button.png" alt="Twitter Logo">
                             </a>
