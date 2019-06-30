@@ -71,12 +71,17 @@
             <div class="slider">
                     <div>
                         <video volume="0" id="video1" autoplay muted loop>
-                            <source src="{{ asset('videos/NS_10s_ONLINE_070318.mp4') }}" type="video/mp4">
+                            <source src="{{ asset('videos/video-1.mp4') }}" type="video/mp4">
                         </video>
                     </div>
                     <div>
                         <video volume="0" id="video2" autoplay muted loop>
-                            <source src="{{ asset('videos/Sparkling_10s.mp4') }}" type="video/mp4">
+                            <source src="{{ asset('videos/video-2.mp4') }}" type="video/mp4">
+                        </video>
+                    </div>
+                    <div>
+                        <video volume="0" id="video3" autoplay muted loop>
+                            <source src="{{ asset('videos/video-3.mp4') }}" type="video/mp4">
                         </video>
                     </div>
                 </div>
