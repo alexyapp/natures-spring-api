@@ -239,7 +239,7 @@
             <div class="container-fluid">
                 <div class="row">
                 <div class="col-md-6">
-                    &copy; 2015 Philippine Spring Water Resources, Inc. All Rights Reserved
+                    &copy; {{ date('Y') }} Philippine Spring Water Resources, Inc. All Rights Reserved
                 </div>
                 <div class="col-md-6 clearfix">
                     <div class="float-right">
