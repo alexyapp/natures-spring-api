@@ -83,11 +83,13 @@
                 
                 <h5 class="mb-4">and further entered in diversifying its product lines through continuous innovation, state-of-the-art facilities and competent employees.</h5>
                 
-                <a class="mb-5 text-white" style="font-size: 1.125rem;" href=""><u>NATURE'S SPRING TIMELINE</u></a>
+                <a class="mb-5 text-white" data-toggle="modal" data-target="#timelineModal" style="font-size: 1.125rem;" href=""><u>NATURE'S SPRING TIMELINE</u></a>
             </div>
         </div>
         <a class="back-to-top-button position-absolute" href="">back to top</a>
     </div>
+
+    @include('partials.website.timeline')
 @endsection
 
 @push('scripts')

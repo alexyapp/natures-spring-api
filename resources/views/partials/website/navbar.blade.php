@@ -45,27 +45,27 @@
                     </li>
                 @endguest --}}
                 <li class="nav-item mx-md-3">
-                    <a class="nav-link" href="{{ route('website.home') }}">
+                    <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" href="{{ route('website.home') }}">
                         Home
                     </a>
                 </li>
                 <li class="nav-item mx-md-3">
-                    <a class="nav-link" href="{{ route('website.about') }}">
+                    <a class="nav-link {{ request()->is('about-us*') ? 'active' : '' }}" href="{{ route('website.about') }}">
                         About Us
                     </a>
                 </li>
                 <li class="nav-item mx-md-3">
-                    <a class="nav-link" href="{{ route('website.events') }}">
+                    <a class="nav-link {{ request()->is('events*') ? 'active' : '' }}" href="{{ route('website.events') }}">
                         Events
                     </a>
                 </li>
                 <li class="nav-item mx-md-3">
-                    <a class="nav-link" href="{{ route('website.products') }}">
+                    <a class="nav-link {{ request()->is('products*') ? 'active' : '' }}" href="{{ route('website.products') }}">
                         Products
                     </a>
                 </li>
                 <li class="nav-item mx-md-3">
-                    <a class="nav-link" href="{{ route('website.careers') }}">
+                    <a class="nav-link {{ request()->is('careers*') ? 'active' : '' }}" href="{{ route('website.careers') }}">
                         Careers
                     </a>
                 </li>

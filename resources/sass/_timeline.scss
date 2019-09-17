@@ -1,0 +1,52 @@
+.timeline {
+    width: 4px;
+    background: #2BACE2;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.timeline-point {
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background: #2BACE2;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.timeline-left, .timeline-right {
+    width: 45%;
+}
+
+.timeline-container {
+    width: 10%;
+}
+
+.event-year h5 {
+    border: 1px solid black;
+    padding: .5rem .75rem;
+    border-radius: 10px;
+}
+
+#timelineModal .modal-header {
+    background: #2BACE2;
+    border-bottom: none;
+    padding: 75px 40px;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.timeline-back-to-top {
+    padding: 30px 40px;
+    background: #2BACE2;
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
+}
+
+
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 800px;
+    }
+}

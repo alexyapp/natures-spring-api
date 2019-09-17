@@ -26,6 +26,9 @@
 // Import Home
 @import './website/home';
 
+// Import Timeline
+@import './timeline';
+
 body {
   background-color: #fff;
 }
@@ -43,4 +46,27 @@ h5 {
 
 p {
   font-size: 1.125rem;
+}
+
+.btn-primary:hover {
+  background-color: #ffffff !important;
+  border-color: rgba(43, 172, 226, 0.9) !important;
+  color: #00AEEF !important;
+}
+
+.navbar-custom {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+}
+
+.headline {
+  margin-top: 92.22px;
+}
+
+li.nav-item.mx-md-3 a:hover, li.nav-item.mx-md-3 a.active {
+  color: #00AEEF!important;
+  background-color: #ffffff;
+  border-radius: 6px;
 }

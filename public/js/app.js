@@ -36594,6 +36594,12 @@ $(document).ready(function () {
       behavior: 'smooth'
     });
   });
+  $('.timeline-back-to-top-button').click(function (e) {
+    e.preventDefault();
+    $('#timelineModal').animate({
+      scrollTop: 0
+    }, 'slow');
+  });
 }); // window.Vue = require('vue');
 
 /**

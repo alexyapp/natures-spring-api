@@ -78,7 +78,7 @@
 @endpush
 
 @section('content')
-        <section>
+        <section style="margin-top: 92.22px;">
             <div class="slider">
                     <div>
                         <video volume="0" id="video1" autoplay muted loop>
@@ -223,7 +223,9 @@
                             <a href="https://www.facebook.com/naturespring/" target="_blank">
                                 <img src="images/facebook-logo-button.png" alt="Facebook Logo">
                             </a>
-                            <p class="mb-0 ml-2">www.facebook.com/naturespring</p>
+                            <a href="https://www.facebook.com/naturespring/">
+                                <p class="mb-0 ml-2">www.facebook.com/naturespring</p>
+                            </a>
                         </div>
                     </div>
                     <div class="row px-2 mb-3 mx-0">
@@ -231,7 +233,9 @@
                             <a href="https://www.instagram.com/naturespring_official/" target="_blank">
                                 <img src="images/instagram-logo.png" alt="Instagram Logo">
                             </a>
-                            <p class="mb-0 ml-2">www.instagram.com/naturespring_official</p>
+                            <a href="https://www.instagram.com/naturespring_official/">
+                                <p class="mb-0 ml-2">www.instagram.com/naturespring_official</p>
+                            </a>
                         </div>
                     </div>
                     <div class="row px-2 mx-0">
@@ -239,7 +243,9 @@
                             <a href="https://twitter.com/natures_spring" target="_blank">
                                 <img src="images/twitter-logo-button.png" alt="Twitter Logo">
                             </a>
-                            <p class="mb-0 ml-2">twitter.com/natures_spring</p>
+                            <a href="https://twitter.com/natures_spring">
+                                <p class="mb-0 ml-2">twitter.com/natures_spring</p>
+                            </a>
                         </div>
                     </div>
                 </div>
