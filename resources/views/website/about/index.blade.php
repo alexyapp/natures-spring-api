@@ -45,6 +45,24 @@
             background: #fff;
             line-height: 75px;
         }
+
+        #timelineModal .modal-header {
+            background: url('/images/timeline-bg.jpg');
+            background-size: cover;
+            background-position-y: center;
+        }
+
+        .modal-header:before {
+            content: '';
+            width: 100%;
+            height: 207px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #2BACE2;
+            opacity: .3;
+            z-index: 1000;
+        }
     </style>
 @endpush
 

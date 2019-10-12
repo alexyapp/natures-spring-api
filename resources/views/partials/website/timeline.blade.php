@@ -2,7 +2,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title" id="timelineModalLabel">WHERE IT BEGAN</h1>
+        <h1 style="z-index: 1001;" class="modal-title" id="timelineModalLabel">WHERE IT BEGAN</h1>
         {{-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button> --}}

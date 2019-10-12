@@ -23,11 +23,11 @@
     <div id="app">
         @include('partials.website.navbar')
 
-        <div class="sticky-social-bar position-fixed" style="z-index: 1001; right: 0; top: 50%; transform: translateY(-50%);">
+        {{-- <div class="sticky-social-bar position-fixed" style="z-index: 1001; right: 0; top: 50%; transform: translateY(-50%);">
             <a href="http://www.responsibottle.com.ph" target="_blank">
                 <img style="width: 150px; height: auto;" src="{{ asset('images/RESPONSI_BOTTLE_LOGO.jpg') }}" alt="">
             </a>
-        </div>
+        </div> --}}
 
         @yield('content')
     </div>

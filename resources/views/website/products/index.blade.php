@@ -145,6 +145,10 @@
             transition: all .3s ease-in-out;
         }
 
+        .overflow-y-scroll {
+            overflow-y: scroll;
+        }
+
         .modal-custom.origin-left,
         .modal-custom.origin-right {
             height: 80%;
@@ -254,6 +258,10 @@
             top: 50%;
             transform: translateY(-50%);
         }
+
+        .rtl {
+            direction: rtl;
+        }
     </style>
 @endpush
 
@@ -265,7 +273,7 @@
         <div class="container-fluid position-relative classic-section mb-md-4 overflow-hidden">
             <img class="img-fluid position-absolute" src="{{ asset('images/classic-water.png') }}" alt="">
             <h1 class="position-absolute text-white-50">CLASSIC WATER</h1>
-            <div class="modal-custom origin-right v-center position-absolute p-5" data-origin="right">
+            <div class="modal-custom origin-right v-center position-absolute p-5 overflow-y-scroll" data-origin="right">
                 <div class="mb-3">
                     <h3>PURIFIED WATER</h3>
                     <p class="mb-2">NATURE'S SPRING PURIFIED Drinking Water is a quality yet affordable brand for daily consumption of clean, and safe bottled water.</p>
@@ -328,7 +336,7 @@
         <div class="container-fluid position-relative fiber-water-section mb-md-4 overflow-hidden">
             <h1 style="z-index: 9999;" class="position-absolute text-white-50 text-center">FIBER WATER</h1>
             <img class="h-100" src="{{ asset('images/fiber.png') }}" alt="">
-            <div class="modal-custom origin-right v-center position-absolute p-5" data-origin="right">
+            <div class="modal-custom origin-right v-center position-absolute p-5 overflow-y-scroll" data-origin="right">
                 <div class="modal-body-custom container-fluid">
                     <div class="row justify-content-md-center">
                         <div class="col-md-9">
@@ -346,7 +354,7 @@
     <section>
         <div class="container-fluid position-relative ice-tea-section mb-md-4 overflow-hidden">
             <h1 class="position-absolute text-white-50">ICE TEA</h1>
-            <div class="modal-custom origin-left v-center position-absolute p-5" data-origin="left">
+            <div class="modal-custom origin-left v-center position-absolute p-5 overflow-y-scroll rtl" data-origin="left">
                 <div class="modal-body-custom container-fluid">
                     <div class="row justify-content-md-center">
                         <div class="col-md-9">
