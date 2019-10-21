@@ -386,6 +386,8 @@
             </div>
         </div>
     </section>
+
+    @include('partials.website.footer')
 @endsection
 
 @push('scripts')

@@ -162,6 +162,8 @@
             </div>
         </div>
     </div>
+
+    @include('partials.website.footer')
 @endsection
 
 @push('scripts')

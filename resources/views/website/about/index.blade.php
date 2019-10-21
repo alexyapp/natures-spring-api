@@ -34,7 +34,7 @@
             background-size: cover;
         }
 
-        .back-to-top-button {
+        .pswri-section .back-to-top-button {
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
@@ -108,6 +108,8 @@
     </div>
 
     @include('partials.website.timeline')
+
+    @include('partials.website.footer')
 @endsection
 
 @push('scripts')
