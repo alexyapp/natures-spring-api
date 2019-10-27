@@ -95,10 +95,10 @@
 
     <div style="background-color: #333; height: 800px;" class="container-fluid event-pictures">
         <div class="row h-100">
-            <div style="background: url('../images/SinulogFestival-1.jpg');" class="col-md-3"></div>
-            <div style="background: url('../images/pics_51.jpg');" class="col-md-3"></div>
-            <div style="background: url('../images/RG-Masskara.jpg');" class="col-md-3"></div>
-            <div style="background: url('../images/When-In-Manila-Philippines-AirAsia-Ati-Atihan-Kalibo-5.jpg');" class="col-md-3"></div>
+            <div style="background: url('../images/5-1.jpg');" class="col-md-3"></div>
+            <div style="background: url('../images/4 2.jpg');" class="col-md-3"></div>
+            <div style="background: url('../images/20190608_101953.jpg');" class="col-md-3"></div>
+            <div style="background: url('../images/IMG_20190310_045013.jpg');" class="col-md-3"></div>
         </div>
     </div>
 
