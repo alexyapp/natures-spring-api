@@ -16893,7 +16893,7 @@ p {
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 1000;
+  z-index: 1001;
 }
 
 .headline {
@@ -16905,5 +16905,13 @@ li.nav-item.mx-md-3 a.active {
   color: #00AEEF !important;
   background-color: #ffffff;
   border-radius: 6px;
+}
+
+.event-pictures > div > div {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  transition: all 0.3s ease;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 

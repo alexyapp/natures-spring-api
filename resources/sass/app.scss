@@ -70,3 +70,9 @@ li.nav-item.mx-md-3 a:hover, li.nav-item.mx-md-3 a.active {
   background-color: #ffffff;
   border-radius: 6px;
 }
+
+.event-pictures > div > div {
+  filter: grayscale(1);
+  transition: all .3s ease;
+  transform: scale(1);
+}

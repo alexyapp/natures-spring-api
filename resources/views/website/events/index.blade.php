@@ -232,6 +232,20 @@
 @push('scripts')
     <script>
         $(document).ready(function() {
+            $('.event-pictures > div > div').hover(function() {
+                var $this = $(this);
+
+                $this.css({
+                    filter: 'grayscale(0)',
+                    transform: 'scale(1.01)'
+                });
+            }, function() {
+                $(this).css({
+                    filter: 'grayscale(1)',
+                    transform: 'scale(1)'
+                });
+            });
+
             var months = [
                 'Jan', 
                 'Feb', 
