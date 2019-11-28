@@ -102,7 +102,7 @@
             <div class="container-fluid">
                 <h6>02</h6>
                 <div class="row">
-                <div class="col-md-6 my-5 offset-md-2">
+                <div class="col-md-6 my-5 offset-md-1">
                     <div class="mb-3">
                     <h1>PROVIDING SAFE AND</h1>
                     <h1>AFFORDABLE WATER</h1>
@@ -117,7 +117,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <img class="mx-auto d-block" style="height: 600px;" src="{{ asset('images/purified-500ml.png') }}" alt="Nature's Spring Purified Water">
+                    <img class="mx-auto d-block position-relative" style="height: 600px; z-index: -1001;" src="{{ asset('images/purified-500ml.png') }}" alt="Nature's Spring Purified Water">
                 </div>
                 </div>
             </div>
@@ -135,7 +135,7 @@
                 </div>
                 </div>
                 <div class="row event-pictures-wrapper">
-                    <div class="col-md-3 h-100">
+                    {{-- <div class="col-md-3 h-100">
                         <h5>January</h5>
                     </div>
                     <div class="col-md-3 h-100">
@@ -146,6 +146,15 @@
                     </div>
                     <div class="col-md-3 h-100">
                         <h5>November</h5>
+                    </div> --}}
+
+                    <div style="background-color: #333; height: 800px;" class="container-fluid event-pictures">
+                        <div class="row h-100">
+                            <div style="background: url('../images/5-1.jpg');" class="col-md-3"></div>
+                            <div style="background: url('../images/4 2.jpg');" class="col-md-3"></div>
+                            <div style="background: url('../images/20190608_101953.jpg'); transform: rotate(180deg);" class="col-md-3 rotate"></div>
+                            <div style="background: url('../images/IMG_20190310_045013.jpg');" class="col-md-3"></div>
+                        </div>
                     </div>
                 </div>
                 <div class="row m-5">
@@ -273,6 +282,31 @@
                 //     var video2 = document.getElementById('video2');
                 //     video2.muted = "muted";
                 // }
+
+                $('.event-pictures > div > div').hover(function() {
+                    var $this = $(this),
+                        transform = 'scale(1.01)';
+                    
+                    if ($this.hasClass('rotate')) {
+                        transform += ' rotate(180deg)';
+                    }
+
+                    $this.css({
+                        filter: 'grayscale(0)',
+                        transform: transform
+                    });
+                }, function() {
+                    var transform = 'scale(1)';
+                    
+                    if ($(this).hasClass('rotate')) {
+                        transform += ' rotate(180deg)';
+                    }
+
+                    $(this).css({
+                        filter: 'grayscale(1)',
+                        transform: transform
+                    });
+                });
             });
         </script>
     @endpush

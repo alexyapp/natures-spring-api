@@ -97,7 +97,7 @@
         <div class="row h-100">
             <div style="background: url('../images/5-1.jpg');" class="col-md-3"></div>
             <div style="background: url('../images/4 2.jpg');" class="col-md-3"></div>
-            <div style="background: url('../images/20190608_101953.jpg');" class="col-md-3"></div>
+            <div style="background: url('../images/20190608_101953.jpg'); transform: rotate(180deg);" class="col-md-3 rotate"></div>
             <div style="background: url('../images/IMG_20190310_045013.jpg');" class="col-md-3"></div>
         </div>
     </div>
@@ -233,16 +233,27 @@
     <script>
         $(document).ready(function() {
             $('.event-pictures > div > div').hover(function() {
-                var $this = $(this);
+                var $this = $(this),
+                    transform = 'scale(1.01)';
+                
+                if ($this.hasClass('rotate')) {
+                    transform += ' rotate(180deg)';
+                }
 
                 $this.css({
                     filter: 'grayscale(0)',
-                    transform: 'scale(1.01)'
+                    transform: transform
                 });
             }, function() {
+                var transform = 'scale(1)';
+                
+                if ($(this).hasClass('rotate')) {
+                    transform += ' rotate(180deg)';
+                }
+
                 $(this).css({
                     filter: 'grayscale(1)',
-                    transform: 'scale(1)'
+                    transform: transform
                 });
             });
 

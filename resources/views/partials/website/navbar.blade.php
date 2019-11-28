@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md navbar-light navbar-custom py-3">
     <div class="container">
-        <a class="navbar-brand" href="{{ url('/') }}">
-            <img style="height: 50px; width: auto;" src="{{ asset('images/logo-thumb.png') }}" alt="">
+        <a style="width: 100px; height: 50px;" class="navbar-brand position-relative" href="{{ url('/') }}">
+            <img class="position-absolute" style="height: 125px; width: auto; top: 50%; left: 50%; transform: translate(-50%, -50%);" src="{{ asset('images/NatureSpring_Logo.png') }}" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>
