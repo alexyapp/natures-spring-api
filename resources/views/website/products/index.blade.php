@@ -12,8 +12,13 @@
         }
 
         @media (min-width: 992px) {
-            .flavored-water-section {
+            .flavored-water-section,
+            .soda-water-section {
                 height: 800px;
+            }
+
+            .soda-water-section {
+                background-size: 100% auto !important;
             }
         }
 
@@ -68,8 +73,13 @@
         }
 
         @media (min-width: 500px) and (max-width: 992px) {
-            .classic-section {
+            .classic-section,
+            .soda-water-section {
                 height: 600px;
+            }
+
+            .soda-water-section {
+                background-size: auto 100% !important;
             }
         }
 
@@ -211,13 +221,19 @@
         }
 
         .ice-tea-section {
-            background: url('../images/icetea.png');
+            background: url('../images/iceteabg.png');
         }
 
         .sparkling-section {
             background: url('../images/sparkling-bkg.png');
             background-size: cover;
             background-color: #fff;
+        }
+
+        .soda-water-section {
+            background: url('../images/sodawaterbg.png');
+            background-repeat: no-repeat;
+            background-position-y: center;
         }
 
         @media (min-width: 768px) {
@@ -346,8 +362,21 @@
 
     <section>
         <div class="container-fluid position-relative fiber-water-section mb-md-4 overflow-hidden">
-            <h1 style="z-index: 9999;" class="position-absolute text-white-50 text-center">FIBER WATER</h1>
-            <img class="h-100" src="{{ asset('images/fiber.png') }}" alt="">
+            <div class="d-flex p-5 h-100">
+                <div class="d-flex w-50 justify-content-center">
+                    <div class="w-25 mx-2">
+                        <img class="img-fluid" src="{{ asset('images/FIBER WATER PRODUCT SHOT.png') }}" alt="">
+                    </div>
+                    <div class="w-25 mx-2">
+                        <img class="img-fluid" src="{{ asset('images/FIBER WATER PRODUCT SHOT LEMON CUCUMBER.png') }}" alt="">
+                    </div>
+                </div>
+
+                <div class="w-50 d-flex align-items-center justify-content-start">
+                    <h1 class="text-white-50 text-center">FIBER WATER</h1>
+                </div>
+            </div>
+
             <div class="modal-custom origin-right v-center position-absolute p-3 p-md-5 overflow-y-scroll" data-origin="right">
                 <div class="modal-body-custom container-fluid">
                     <div class="row justify-content-md-center">
@@ -365,7 +394,26 @@
 
     <section>
         <div class="container-fluid position-relative ice-tea-section mb-md-4 overflow-hidden">
-            <h1 class="position-absolute text-white-50">ICE TEA</h1>
+            <div class="d-flex h-100">
+                <div class="w-25">
+                    <h1 class="text-white-50 text-right">ICE</h1>
+                </div>
+
+                <div class="d-flex w-50 justify-content-center mt-5">
+                    <div class="w-25 mx-3">
+                        <img class="img-fluid" src="{{ asset('images/84 X 38 IN ICE TEA LEMON final edited.png') }}" alt="">
+                    </div>
+                    <div class="w-25 mx-3">
+                        <img class="img-fluid" src="{{ asset('images/84 X 38 IN ICE TEA APPLE final edited.png') }}" alt="">
+                    </div>
+                </div>
+
+                <div class="w-25">
+                    <h1 class="text-white-50">TEA</h1>
+                </div>
+            </div>
+
+
             <div class="modal-custom origin-left v-center position-absolute p-3 p-md-5 overflow-y-scroll rtl" data-origin="left">
                 <div class="modal-body-custom container-fluid">
                     <div class="row justify-content-md-center">
@@ -383,12 +431,12 @@
 
     <section>
         <div class="container-fluid position-relative sparkling-section mb-md-4 overflow-hidden">
-            <img class="img-fluid position-absolute" src="{{ asset('images/sparkling.png') }}" alt="">
+            <img style="width: 70%;" class="img-fluid position-absolute" src="{{ asset('images/sparkling.png') }}" alt="">
             <div class="modal-custom origin-bottom h-center position-absolute p-3 p-md-5" data-origin="bottom">
                 <div class="modal-body-custom container-fluid">
                     <div class="row justify-content-md-center">
                         <div class="col-md-9">
-                            <h3 class="text-center">NATURE’S SPRING SPARKLING FLAVORED WATER</h3>
+                            <h3 class="text-center">NATURE’S SPRING SPARKLING WATER</h3>
                             <p class="mb-2">Flavored Sparkling Water by Nature's Spring is a healthier alternative to sugar soda due to its minimal calories content. It comes with 3 different #SparklyTwist flavors, namely: Lime, Apple and Pineapple that has no sugar added, with 100% fruit concentrate, and no added preservatives. Available in 330mL.</p>
                             <p class="mb-2">For those who seek the good kind of pleasure without a guilt may have a Sparkling Water by Nature's Spring.</p>
                             <p>Sparkling Water is a variation of water infused with carbon dioxide gas, where carbon dioxide gas has been dissolved under pressure and is a healthier alternative to sugar soda due to its zero calorie content.</p>
@@ -400,9 +448,17 @@
     </section>
 
     <section>
-        <div class="container-fluid position-relative fiber-water-section mb-md-4 overflow-hidden">
-            <h1 style="z-index: 9999;" class="position-absolute text-white-50 text-center">SODA WATER</h1>
-            <img class="h-100" src="{{ asset('images/soda-water.png') }}" alt="">
+        <div class="container-fluid position-relative soda-water-section mb-md-4 overflow-hidden">
+            <div class="d-flex h-100">
+                <div class="w-50 d-flex justify-content-end align-items-center">
+                    <h1 class="text-white-50 text-center">SODA WATER</h1>
+                </div>
+                
+                <div class="w-50 d-flex align-items-center">
+                    <img class="img-fluid" src="{{ asset('images/sodawater.png') }}" alt="">
+                </div>
+            </div>
+
             <div class="modal-custom origin-right v-center position-absolute p-3 p-md-5 overflow-y-scroll" data-origin="right">
                 <div class="modal-body-custom container-fluid">
                     <div class="row justify-content-md-center">
@@ -410,42 +466,6 @@
                             <h3 class="text-center">NATURE’S SPRING SODA WATER</h3>
                             <p class="mb-2">Soda Water is also a variation of water infused with carbon dioxide gas, where carbon dioxide gas has been dissolved under pressure and is a healthier alternative to sugar due to its zero calorie content.</p>
                             <p>Soda Water contains sodium bicarbonate that adds bitterness for enhanced taste. Available in 330mL.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="container-fluid position-relative sparkling-section mb-md-4 overflow-hidden">
-            <img class="img-fluid position-absolute" src="{{ asset('images/ice tea.png') }}" alt="">
-            <div class="modal-custom origin-bottom h-center position-absolute p-3 p-md-5" data-origin="bottom">
-                <div class="modal-body-custom container-fluid">
-                    <div class="row justify-content-md-center">
-                        <div class="col-md-9">
-                            <h3 class="text-center">NATURE’S SPRING ICE TEA</h3>
-                            <p class="mb-2">NATURE’S SPRING Ice Tea is a ready-to-drink (RTD) product made from 100% real green tea extract that contains antioxidants. It has no sugar added and no added preservatives.</p>
-                            <p class="mb-2">Enjoy a chilled #TealiciouslyGood bottle of NATURE’S SPRING Ice Tea Apple and Lemon flavor. Available in 220mL, 350mL, and 500mL.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="container-fluid position-relative fiber-water-section mb-md-4 overflow-hidden">
-            <h1 style="z-index: 9999;" class="position-absolute text-white-50 text-center">FIBER WATER</h1>
-            <img class="h-100" src="{{ asset('images/soda-water.png') }}" alt="">
-            <div class="modal-custom origin-right v-center position-absolute p-3 p-md-5 overflow-y-scroll" data-origin="right">
-                <div class="modal-body-custom container-fluid">
-                    <div class="row justify-content-md-center">
-                        <div class="col-md-9">
-                            <h3 class="text-center">NATURE’S SPRING FIBER WATER</h3>
-                            <p class="mb-2">Tastes like water but with added benefits. NATURE’S SPRING Fiber Water is infused with soluble dietary fiber that helps with your digestion.</p>
-                            <p class="mb-2">NATURE’S SPRING Fiber Water made healthy lifestyle hassle free and even more convenient - Water + Fiber in a bottle. It contains prebiotics that feeds probiotics and keeps your gut in perfect shape.</p>
-                            <p>NATURE’S SPRING Fiber Water Original and Lemon Cucumber Flavor are available in 500mL.</p>  
                         </div>
                     </div>
                 </div>
