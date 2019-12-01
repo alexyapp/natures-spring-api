@@ -257,10 +257,10 @@
         }
 
         @media (min-width: 1170px) {
-            .sparkling-section img {
+            /* .sparkling-section img {
                 max-width: unset;
                 object-position: 0 10px;
-            }
+            } */
 
             h1 {
                 font-size: 100px;
@@ -282,10 +282,10 @@
             bottom: 30%;
         }
 
-        .sparkling-section img {
+        /* .sparkling-section img {
             top: 50%;
             transform: translateY(-50%);
-        }
+        } */
 
         .rtl {
             direction: rtl;
@@ -431,7 +431,17 @@
 
     <section>
         <div class="container-fluid position-relative sparkling-section mb-md-4 overflow-hidden">
-            <img style="width: 70%;" class="img-fluid position-absolute" src="{{ asset('images/sparkling.png') }}" alt="">
+            <div class="d-flex h-100 align-items-center">
+                <div class="w-50">
+                    <img class="img-fluid" src="{{ asset('images/sparkling.png') }}" alt="">
+                </div>
+
+                <div class="w-50 px-5">
+                    <h1 style="color: rgba(0, 0, 0, .1);">SPARKLING WATER</h1>
+                </div>
+            </div>
+
+
             <div class="modal-custom origin-bottom h-center position-absolute p-3 p-md-5" data-origin="bottom">
                 <div class="modal-body-custom container-fluid">
                     <div class="row justify-content-md-center">
@@ -448,7 +458,7 @@
     </section>
 
     <section>
-        <div class="container-fluid position-relative soda-water-section mb-md-4 overflow-hidden">
+        <div class="container-fluid position-relative soda-water-section overflow-hidden">
             <div class="d-flex h-100">
                 <div class="w-50 d-flex justify-content-end align-items-center">
                     <h1 class="text-white-50 text-center">SODA WATER</h1>
